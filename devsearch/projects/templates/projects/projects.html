@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+{% block content %}
+<h1>all projects</h1>
+
+{% for project in projects %}
+    <a href="{% url 'project' project.id %}">{{project.title}}</a>
+    {{project.description}} <br>
+{% endfor %}
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat aut modi similique iusto, accusamus aliquid eaque voluptatum consectetur dolores quia perspiciatis! Id vel eligendi reiciendis, ab laudantium nisi unde officiis.</p>
+{% endblock content %}
