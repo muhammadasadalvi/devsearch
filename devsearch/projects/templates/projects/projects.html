@@ -1,10 +1,12 @@
 {% extends "main.html" %}
 {% block content %}
-<h1>all projects</h1>
+<h1>All projects</h1>
 
 {% for project in projects %}
     <a href="{% url 'project' project.id %}">{{project.title}}</a>
-    {{project.description}} <br>
+    <p>{{project.}}</p>
+    <p><a href="{% url 'update-project' project.id %}">update</a></p>
+    <p><a href="{% url 'delete-project' project.id %}">delete</a></p>
+    <hr>
 {% endfor %}
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat aut modi similique iusto, accusamus aliquid eaque voluptatum consectetur dolores quia perspiciatis! Id vel eligendi reiciendis, ab laudantium nisi unde officiis.</p>
 {% endblock content %}
